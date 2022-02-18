@@ -14,5 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::get('/components-alerts', function () {
+    return view('components-alerts');
+});
+
+Route::get('/dompetcreatenew', function () {
+    return view('dompetcreatenew');
+});
+
+Route::get('/components-accordion', function () {
+    return view('components-accordion');
+});
+

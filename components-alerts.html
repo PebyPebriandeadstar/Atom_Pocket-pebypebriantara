@@ -346,11 +346,14 @@
           <li class="breadcrumb-item active">Dompet</li>
         </ol>
       </nav>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <a href="dompetcreatenew.html" button class="btn btn-primary me-md-2" type="button">Buat Baru</button></a>
     </div><!-- End Page Title -->
+    </div>
 
     <section class="section dashboard">
       <div class="row">
-
+        
             <!-- Recent Sales -->
             <div class="col-12">
               <div class="card recent-sales overflow-auto">
@@ -361,7 +364,6 @@
                     <li class="dropdown-header text-start">
                       <h6>Filter</h6>
                     </li>
-
                     <li><a class="dropdown-item" href="#">Today</a></li>
                     <li><a class="dropdown-item" href="#">This Month</a></li>
                     <li><a class="dropdown-item" href="#">This Year</a></li>
@@ -369,53 +371,76 @@
                 </div>
 
                 <div class="card-body">
-                  <h5 class="card-title">Recent Sales <span>| Today</span></h5>
+                  <h5 class="card-title">Dompet <span>| Hari Ini</span></h5>
 
                   <table class="table table-borderless datatable">
                     <thead>
                       <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Customer</th>
-                        <th scope="col">Product</th>
-                        <th scope="col">Price</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Referensi</th>
+                        <th scope="col">Deskripsi</th>
                         <th scope="col">Status</th>
+                        <th scope="col">Action</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <th scope="row"><a href="#">#2457</a></th>
-                        <td>Brandon Jacob</td>
-                        <td><a href="#" class="text-primary">At praesentium minu</a></td>
-                        <td>$64</td>
-                        <td><span class="badge bg-success">Approved</span></td>
+                        <th scope="row"><a href="#">1</a></th>
+                        <td>Dompet Utama</td>
+                        <td><a href="#" class="text-primary">6324986675</a></td>
+                        <td>Bank BCA</td>
+                        <td><span class="badge bg-success">Aktif</span></td>
+                        <td>
+                        <div class="btn-group" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <li><a class="dropdown-item" href="#">Detail</a></li>
+                        <li><a class="dropdown-item" href="#">Ubah</a></li>
+                        <li><a class="dropdown-item" href="#">Tidak Aktif</a>
+                        </li>
+                        </ul>
+                       </div>
+                      </td>
                       </tr>
                       <tr>
-                        <th scope="row"><a href="#">#2147</a></th>
-                        <td>Bridie Kessler</td>
-                        <td><a href="#" class="text-primary">Blanditiis dolor omnis similique</a></td>
-                        <td>$47</td>
-                        <td><span class="badge bg-warning">Pending</span></td>
+                        <th scope="row"><a href="#">2</a></th>
+                        <td>Dompet Tagihan</td>
+                        <td><a href="#" class="text-primary">5479875323</a></td>
+                        <td>Bank BCA</td>
+                        <td><span class="badge bg-success">Aktif</span></td>
+                        <td>
+                        <div class="btn-group" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <li><a class="dropdown-item" href="#">Detail</a></li>
+                        <li><a class="dropdown-item" href="#">Ubah</a></li>
+                        <li><a class="dropdown-item" href="#">Tidak Aktif</a>
+                        </li>
+                        </ul>
+                       </div>
+                      </td>
                       </tr>
                       <tr>
-                        <th scope="row"><a href="#">#2049</a></th>
-                        <td>Ashleigh Langosh</td>
-                        <td><a href="#" class="text-primary">At recusandae consectetur</a></td>
-                        <td>$147</td>
-                        <td><span class="badge bg-success">Approved</span></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2644</a></th>
-                        <td>Angus Grady</td>
-                        <td><a href="#" class="text-primar">Ut voluptatem id earum et</a></td>
-                        <td>$67</td>
-                        <td><span class="badge bg-danger">Rejected</span></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2644</a></th>
-                        <td>Raheem Lehner</td>
-                        <td><a href="#" class="text-primary">Sunt similique distinctio</a></td>
-                        <td>$165</td>
-                        <td><span class="badge bg-success">Approved</span></td>
+                        <th scope="row"><a href="#">3</a></th>
+                        <td>Dompet Cadangan</td>
+                        <td><a href="#" class="text-primary">8645789876</a></td>
+                        <td>Bank Permata</td>
+                        <td><span class="badge bg-success">Aktif</span></td>
+                        <td>
+                        <div class="btn-group" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <li><a class="dropdown-item" href="#">Detail</a></li>
+                        <li><a class="dropdown-item" href="#">Ubah</a></li>
+                        <li><a class="dropdown-item" href="#">Tidak Aktif</a>
+                        </li>
+                        </ul>
+                       </div>
+                      </td>
                       </tr>
                     </tbody>
                   </table>
