@@ -25,7 +25,6 @@
   <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
-
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
@@ -38,7 +37,6 @@
 </head>
 
 <body>
-
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
 
@@ -274,7 +272,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link " href="#">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -288,12 +286,12 @@
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="components-alerts.html">
+            <a href="{{ url('components-alerts') }}">
               <i class="bi bi-circle"></i><span>Dompet</span>
             </a>
           </li>
           <li>
-            <a href="components-accordion.html">
+            <a href="{{ url('components-accordion') }}">
               <i class="bi bi-circle"></i><span>Kategori</span>
             </a>
           </li>
@@ -307,12 +305,12 @@
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="forms-elements.html">
+            <a href="{{ url('forms-elements') }}">
               <i class="bi bi-circle"></i><span>Dompet Masuk</span>
             </a>
           </li>
           <li>
-            <a href="forms-layouts.html">
+            <a href="{{ url('forms-layouts') }}">
               <i class="bi bi-circle"></i><span>Dompet Keluar</span>
             </a>
           </li>
@@ -325,7 +323,7 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="tables-data.html">
+            <a href="{{ url('tables-data') }}">
               <i class="bi bi-circle"></i><span>Laporan Transaksi</span>
             </a>
           </li>
@@ -339,116 +337,81 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Dompet .aktif</h1>
+      <h1>Laporan Transaksi .aktif</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active">Dompet</li>
+          <li class="breadcrumb-item active">Laporan Transaksi</li>
         </ol>
       </nav>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <a href="dompetcreatenew.html" button class="btn btn-primary me-md-2" type="button">Buat Baru</button></a>
     </div><!-- End Page Title -->
     </div>
 
     <section class="section dashboard">
       <div class="row">
+
+  <form class="row g-3 needs-validation" novalidate>
+  <div class="col-md-4">
         
-            <!-- Recent Sales -->
-            <div class="col-12">
-              <div class="card recent-sales overflow-auto">
+<label for="validationCustom02" class="form-label">Tanggal Awal:</label>
+    <input type="date" class="form-control" id="validationCustom02" value="2019-08-02" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+</div>
 
-                <div class="filter">
-                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                    <li class="dropdown-header text-start">
-                      <h6>Filter</h6>
-                    </li>
-                    <li><a class="dropdown-item" href="#">Today</a></li>
-                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                  </ul>
-                </div>
+  <div class="col-md-4">
+    <label for="validationCustom02" class="form-label">Tanggal Akhir:</label>
+    <input type="date" class="form-control" id="validationCustom02" value="2019-08-02" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+<div class="col-md-4">
+<h3>Status : </h3>
+<i class="bi bi-check-square-fill">Tampilkan Uang Masuk</i><br>
+<i class="bi bi-check-square-fill">Tampilkan uang Keluar</i>
+</div>
+<div class="col-md-3">
+    <label for="validationCustom04" class="form-label">Kategori</label>
+    <select class="form-select" id="validationCustom04" required>
+      <option selected disabled value="">Pilih...</option>
+      <option>Pengeluaran</option>
+      <option>Pemasukan</option>
+    </select>
+    <div class="invalid-feedback">
+      Tolong masukan kategori yang valid.
+    </div>
+  </div>
 
-                <div class="card-body">
-                  <h5 class="card-title">Dompet <span>| Hari Ini</span></h5>
+  <div class="col-md-3">
+    <label for="validationCustom04" class="form-label">Dompet</label>
+    <select class="form-select" id="validationCustom04" required>
+      <option selected disabled value="">Pilih...</option>
+      <option>Dompet utama</option>
+      <option>Dompet cadangan</option>
+    </select>
+    <div class="invalid-feedback">
+      Tolong masukan Dompet yang valid.
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+      <label class="form-check-label" for="invalidCheck">
+        Agree to terms and conditions
+      </label>
+      <div class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Buat Laporan</button>
+    <button class="btn btn-primary" type="submit">Buat ke Excel</button>
+  </div>
+</form>
 
-                  <table class="table table-borderless datatable">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Nama</th>
-                        <th scope="col">Referensi</th>
-                        <th scope="col">Deskripsi</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Action</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row"><a href="#">1</a></th>
-                        <td>Dompet Utama</td>
-                        <td><a href="#" class="text-primary">6324986675</a></td>
-                        <td>Bank BCA</td>
-                        <td><span class="badge bg-success">Aktif</span></td>
-                        <td>
-                        <div class="btn-group" role="group">
-                        <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                        <li><a class="dropdown-item" href="#">Detail</a></li>
-                        <li><a class="dropdown-item" href="#">Ubah</a></li>
-                        <li><a class="dropdown-item" href="#">Tidak Aktif</a>
-                        </li>
-                        </ul>
-                       </div>
-                      </td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#">2</a></th>
-                        <td>Dompet Tagihan</td>
-                        <td><a href="#" class="text-primary">5479875323</a></td>
-                        <td>Bank BCA</td>
-                        <td><span class="badge bg-success">Aktif</span></td>
-                        <td>
-                        <div class="btn-group" role="group">
-                        <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                        <li><a class="dropdown-item" href="#">Detail</a></li>
-                        <li><a class="dropdown-item" href="#">Ubah</a></li>
-                        <li><a class="dropdown-item" href="#">Tidak Aktif</a>
-                        </li>
-                        </ul>
-                       </div>
-                      </td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#">3</a></th>
-                        <td>Dompet Cadangan</td>
-                        <td><a href="#" class="text-primary">8645789876</a></td>
-                        <td>Bank Permata</td>
-                        <td><span class="badge bg-success">Aktif</span></td>
-                        <td>
-                        <div class="btn-group" role="group">
-                        <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                        <li><a class="dropdown-item" href="#">Detail</a></li>
-                        <li><a class="dropdown-item" href="#">Ubah</a></li>
-                        <li><a class="dropdown-item" href="#">Tidak Aktif</a>
-                        </li>
-                        </ul>
-                       </div>
-                      </td>
-                      </tr>
-                    </tbody>
-                  </table>
-
-                </div>
-
-              </div>
-            </div><!-- End Recent Sales -->
 
       </div>
     </section>
@@ -480,6 +443,7 @@
   <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
   <script src="assets/vendor/tinymce/tinymce.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>

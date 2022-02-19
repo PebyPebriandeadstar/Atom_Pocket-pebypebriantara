@@ -308,12 +308,12 @@
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="forms-elements.html">
+            <a href="{{ url('forms-elements') }}">
               <i class="bi bi-circle"></i><span>Dompet Masuk</span>
             </a>
           </li>
           <li>
-            <a href="forms-layouts.html">
+            <a href="{{ url('forms-layouts') }}">
               <i class="bi bi-circle"></i><span>Dompet Keluar</span>
             </a>
           </li>
@@ -326,7 +326,7 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="tables-data.html">
+            <a href="{{ url('tables-data') }}">
               <i class="bi bi-circle"></i><span>Laporan Transaksi</span>
             </a>
           </li>

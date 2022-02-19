@@ -29,3 +29,29 @@ Route::get('/components-accordion', function () {
     return view('components-accordion');
 });
 
+Route::get('/kategoricreatenew', function () {
+    return view('kategoricreatenew');
+});
+
+Route::get('/forms-elements', function () {
+    return view('forms-elements');
+});
+
+Route::get('/forms-layouts', function () {
+    return view('forms-layouts');
+});
+
+Route::get('/dompetmasukcreatenew', function () {
+    return view('dompetmasukcreatenew');
+});
+
+Route::get('/dompetkeluarcreatenew', function () {
+    return view('dompetkeluarcreatenew');
+});
+
+Route::get('/tables-data', function () {
+    return view('tables-data');
+});
+
+
+

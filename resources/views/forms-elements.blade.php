@@ -274,7 +274,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link " href="#">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -288,12 +288,12 @@
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="components-alerts.html">
+            <a href="{{ url('components-alerts') }}">
               <i class="bi bi-circle"></i><span>Dompet</span>
             </a>
           </li>
           <li>
-            <a href="components-accordion.html">
+            <a href="{{ url('components-accordion') }}">
               <i class="bi bi-circle"></i><span>Kategori</span>
             </a>
           </li>
@@ -307,12 +307,12 @@
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="forms-elements.html">
+            <a href="{{ url('forms-elements') }}">
               <i class="bi bi-circle"></i><span>Dompet Masuk</span>
             </a>
           </li>
           <li>
-            <a href="forms-layouts.html">
+            <a href="{{ url('forms-layouts') }}">
               <i class="bi bi-circle"></i><span>Dompet Keluar</span>
             </a>
           </li>
@@ -325,7 +325,7 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="tables-data.html">
+            <a href="{{ url('tables-data') }}">
               <i class="bi bi-circle"></i><span>Laporan Transaksi</span>
             </a>
           </li>
@@ -339,15 +339,15 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Dompet Keluar .aktif</h1>
+      <h1>Dompet Masuk .aktif</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active">Dompet Keluar</li>
+          <li class="breadcrumb-item active">Dompet Masuk</li>
         </ol>
       </nav>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <a href="dompetkeluarcreatenew.html" button class="btn btn-primary me-md-2" type="button">Buat Baru</button></a>
+        <a href="{{ url('dompetmasukcreatenew') }}" button class="btn btn-primary me-md-2" type="button">Buat Baru</button></a>
     </div><!-- End Page Title -->
     </div>
 
@@ -371,7 +371,7 @@
                 </div>
 
                 <div class="card-body">
-                  <h5 class="card-title">Dompet Keluar <span>| Hari Ini</span></h5>
+                  <h5 class="card-title">Dompet Masuk <span>| Hari Ini</span></h5>
 
                   <table class="table table-borderless datatable">
                     <thead>
@@ -389,19 +389,19 @@
                       <tr>
                         <th scope="row"><a href="#">1</a></th>
                         <td>2019-3-8</td>
-                        <td>WOUT0000000002</td>
-                        <td>Bayar Kost</td>
-                        <td>Pengeluaran</td>
-                        <td>(+)300.000</td>
+                        <td>WIN0000000002</td>
+                        <td>Gaji Bulan Januari</td>
+                        <td>Pemasukan</td>
+                        <td>(+)3.900.000</td>
                         <td>Dompet utama</td>
                       </tr>
                       <tr>
                         <th scope="row"><a href="#">2</a></th>
                         <td>2019-3-8</td>
-                        <td>WOUT0000000001</td>
-                        <td>Bayar Dokter</td>
-                        <td>Pengeluaran</td>
-                        <td>(+)50.000</td>
+                        <td>WIN0000000002</td>
+                        <td>Gaji Bulan Januari</td>
+                        <td>Saldo Awal</td>
+                        <td>(+)100.000</td>
                         <td>Dompet cadangan</td>
                       </tr>
                     </tbody>

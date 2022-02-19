@@ -274,7 +274,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link " href="#">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -288,12 +288,12 @@
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="components-alerts.html">
+            <a href="{{ url('components-alerts') }}">
               <i class="bi bi-circle"></i><span>Dompet</span>
             </a>
           </li>
           <li>
-            <a href="components-accordion.html">
+            <a href="{{ url('components-accordion') }}">
               <i class="bi bi-circle"></i><span>Kategori</span>
             </a>
           </li>
@@ -307,12 +307,12 @@
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="forms-elements.html">
+            <a href="{{ url('forms-elements') }}">
               <i class="bi bi-circle"></i><span>Dompet Masuk</span>
             </a>
           </li>
           <li>
-            <a href="forms-layouts.html">
+            <a href="{{ url('forms-layouts') }}">
               <i class="bi bi-circle"></i><span>Dompet Keluar</span>
             </a>
           </li>
@@ -325,7 +325,7 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="tables-data.html">
+            <a href="{{ url('tables-data') }}">
               <i class="bi bi-circle"></i><span>Laporan Transaksi</span>
             </a>
           </li>
@@ -339,65 +339,78 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Dompet .Buat Baru</h1>
+      <h1>Dompet Keluar .aktif</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active">Dompet</li>
+          <li class="breadcrumb-item active">Dompet Keluar</li>
         </ol>
       </nav>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <a href="{{ url('dompetkeluarcreatenew') }}" button class="btn btn-primary me-md-2" type="button">Buat Baru</button></a>
     </div><!-- End Page Title -->
     </div>
 
     <section class="section dashboard">
       <div class="row">
+        
+            <!-- Recent Sales -->
+            <div class="col-12">
+              <div class="card recent-sales overflow-auto">
 
-        <form class="row g-3 needs-validation" novalidate>
-  <div class="col-md-4">
-    <label for="validationCustom01" class="form-label">Nama</label>
-    <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
-    <div class="valid-feedback">
-      Looks good!
-    </div>
-  </div>
-  <div class="col-md-4">
-    <label for="validationCustom02" class="form-label">Referensi</label>
-    <input type="text" class="form-control" id="validationCustom02" value="9654378653" required>
-    <div class="valid-feedback">
-      Looks good!
-    </div>
-  </div>
-    <div class="input-group">
-    <span class="input-group-text">Deskripsi</span>
-    <textarea class="form-control" aria-label="With textarea"></textarea>
-  </div>
-  <div class="col-md-3">
-    <label for="validationCustom04" class="form-label">Status</label>
-    <select class="form-select" id="validationCustom04" required>
-      <option selected disabled value="">Pilih...</option>
-      <option>Aktif</option>
-      <option>Tidak Aktif</option>
-    </select>
-    <div class="invalid-feedback">
-      Tolong masukan status yang valid.
-    </div>
-  </div>
-  <div class="col-12">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-      <label class="form-check-label" for="invalidCheck">
-        Agree to terms and conditions
-      </label>
-      <div class="invalid-feedback">
-        You must agree before submitting.
-      </div>
-    </div>
-  </div>
-  <div class="col-12">
-    <button class="btn btn-primary" type="submit">Simpan</button>
-  </div>
-</form>
+                <div class="filter">
+                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                    <li class="dropdown-header text-start">
+                      <h6>Filter</h6>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Today</a></li>
+                    <li><a class="dropdown-item" href="#">This Month</a></li>
+                    <li><a class="dropdown-item" href="#">This Year</a></li>
+                  </ul>
+                </div>
 
+                <div class="card-body">
+                  <h5 class="card-title">Dompet Keluar <span>| Hari Ini</span></h5>
+
+                  <table class="table table-borderless datatable">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Tanggal</th>
+                        <th scope="col">Kode</th>
+                        <th scope="col">Deskripsi</th>
+                        <th scope="col">Kategori</th>
+                        <th scope="col">Nilai</th>
+                        <th scope="col">Dompet</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row"><a href="#">1</a></th>
+                        <td>2019-3-8</td>
+                        <td>WOUT0000000002</td>
+                        <td>Bayar Kost</td>
+                        <td>Pengeluaran</td>
+                        <td>(+)300.000</td>
+                        <td>Dompet utama</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">2</a></th>
+                        <td>2019-3-8</td>
+                        <td>WOUT0000000001</td>
+                        <td>Bayar Dokter</td>
+                        <td>Pengeluaran</td>
+                        <td>(+)50.000</td>
+                        <td>Dompet cadangan</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+
+              </div>
+            </div><!-- End Recent Sales -->
 
       </div>
     </section>

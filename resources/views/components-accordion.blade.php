@@ -274,7 +274,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link " href="#">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -288,12 +288,12 @@
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="components-alerts.html">
+            <a href="{{ url('components-alerts') }}">
               <i class="bi bi-circle"></i><span>Dompet</span>
             </a>
           </li>
           <li>
-            <a href="components-accordion.html">
+            <a href="{{ url('components-accordion') }}">
               <i class="bi bi-circle"></i><span>Kategori</span>
             </a>
           </li>
@@ -307,12 +307,12 @@
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="forms-elements.html">
+            <a href="{{ url('forms-elements') }}">
               <i class="bi bi-circle"></i><span>Dompet Masuk</span>
             </a>
           </li>
           <li>
-            <a href="forms-layouts.html">
+            <a href="{{ url('forms-layouts') }}">
               <i class="bi bi-circle"></i><span>Dompet Keluar</span>
             </a>
           </li>
@@ -325,7 +325,7 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="tables-data.html">
+            <a href="{{ url('tables-data') }}">
               <i class="bi bi-circle"></i><span>Laporan Transaksi</span>
             </a>
           </li>
@@ -347,7 +347,7 @@
         </ol>
       </nav>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <a href="kategoricreatenew.html" button class="btn btn-primary me-md-2" type="button">Buat Baru</button></a>
+        <a href="{{ url('kategoricreatenew') }}" button class="btn btn-primary me-md-2" type="button">Buat Baru</button></a>
     </div><!-- End Page Title -->
     </div>
 
